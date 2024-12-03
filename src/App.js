@@ -1,6 +1,6 @@
 import './App.css';
 import "./Personal.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from './Home';
 import About from './About'
 import Contact from './Contact';
@@ -12,7 +12,7 @@ import Personal from './Personal';
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
+     <HashRouter>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -21,7 +21,7 @@ function App() {
       <Route path="/security" element={<Security />} />
       <Route path="/personal" element={<Personal />} />
       </Routes>
-     </BrowserRouter>
+     </HashRouter>
     </div>
   );
 }
